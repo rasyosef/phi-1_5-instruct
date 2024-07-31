@@ -27,7 +27,7 @@ The model has underwent a post-training process that incorporates both **supervi
     - [HuggingFaceH4/ultrafeedback_binarized](https://huggingface.co/datasets/HuggingFaceH4/ultrafeedback_binarized)
     - [argilla/distilabel-intel-orca-dpo-pairs](https://huggingface.co/datasets/argilla/distilabel-intel-orca-dpo-pairs)
     - [argilla/distilabel-math-preference-dpo](https://huggingface.co/datasets/argilla/distilabel-math-preference-dpo)
-    - [jondurbin/py-dpo-v0.1](https://huggingface.co/datasets/argilla/distilabel-math-preference-dpo)
+    - [jondurbin/py-dpo-v0.1](https://huggingface.co/datasets/jondurbin/py-dpo-v0.1)
 
 ## How to use
 ### Chat Format
