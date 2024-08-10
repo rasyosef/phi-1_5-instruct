@@ -29,6 +29,9 @@ The model has underwent a post-training process that incorporates both **supervi
     - [argilla/distilabel-math-preference-dpo](https://huggingface.co/datasets/argilla/distilabel-math-preference-dpo)
     - [jondurbin/py-dpo-v0.1](https://huggingface.co/datasets/jondurbin/py-dpo-v0.1)
 
+- Final Merged Model
+    - https://huggingface.co/rasyosef/Phi-1_5-Instruct-v0.1
+
 ## How to use
 ### Chat Format
 
@@ -111,3 +114,7 @@ This model outperforms HuggingFace's SmolLM-1.7B-Instruct and the TinyLlama-1.1B
 |[TinyLlama-1.1B-Chat-v1.0](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0)|1.1B|21.23|0|
 |[phi-1_5](https://huggingface.co/microsoft/phi-1_5)|1.4B|20.51|31.73|
 
+## Demo
+
+You can use this hugging face space to interact with the chat model
+https://huggingface.co/spaces/rasyosef/phi-1_5-chat
