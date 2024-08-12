@@ -100,19 +100,23 @@ print(output[0]['generated_text'])
 
 Note: If you want to use flash attention, call _AutoModelForCausalLM.from_pretrained()_ with _attn_implementation="flash_attention_2"_
 
+
 ## Benchmarks
 
-This model outperforms HuggingFace's SmolLM-1.7B-Instruct and the TinyLlama-1.1B-Chat-v1.0 models on IFEval and GSM8K benchmarks. These benchmarks were run using EleutherAI's [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)
+This model outperforms HuggingFace's SmolLM-1.7B-Instruct and the TinyLlama-1.1B-Chat-v1.0 models on **all 5** of the following benchmarks. These benchmarks were run using EleutherAI's [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)
 
 - **IFEval (Instruction Following Evaluation)**: IFEval is a fairly interesting dataset that tests the capability of models to clearly follow explicit instructions, such as “include keyword x” or “use format y”. The models are tested on their ability to strictly follow formatting instructions rather than the actual contents generated, allowing strict and rigorous metrics to be used.
 - **GSM8k (5-shot)**: diverse grade school math word problems to measure a model's ability to solve multi-step mathematical reasoning problems.
+- **MMLU (5-shot)** - a test to measure a text model's multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more.
+- **TruthfulQA** - a test to measure a model's propensity to reproduce falsehoods commonly found online. Note: TruthfulQA is technically a 6-shot task in the Harness because each example is prepended with 6 Q/A pairs, even in the 0-shot setting.
+- **Winogrande (5-shot)** - an adversarial and difficult Winograd benchmark at scale, for commonsense reasoning.
 
-|Model|Size (# params)|IFEval|GSM8K|
-|:----|:--------------|:-----|:----|
-|[Phi-1_5-Instruct-v0.1](https://huggingface.co/rasyosef/Phi-1_5-Instruct-v0.1)|1.4B|**26.71**|**41.78**|
-|[SmolLM-1.7B-Instruct](https://huggingface.co/HuggingFaceTB/SmolLM-1.7B-Instruct)|1.7B|24.21|3.45|
-|[TinyLlama-1.1B-Chat-v1.0](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0)|1.1B|21.23|0|
-|[phi-1_5](https://huggingface.co/microsoft/phi-1_5)|1.4B|20.51|31.73|
+|Model|Size (# params)|IFEval|GSM8K|MMLU|TruthfulQA|Winogrande|
+|:----|:--------------|:-----|:----|:---|:---------|:---------|
+|[Phi-1_5-Instruct-v0.1](https://huggingface.co/rasyosef/Phi-1_5-Instruct-v0.1)|1.4B|**26.71**|**41.78**|39.72|**47.9**|70.4|
+|[SmolLM-1.7B-Instruct](https://huggingface.co/HuggingFaceTB/SmolLM-1.7B-Instruct)|1.7B|24.21|3.45|23.57|47.38|63.61|
+|[TinyLlama-1.1B-Chat-v1.0](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0)|1.1B|21.23|0|24.03|39.14|61.01|
+|[phi-1_5](https://huggingface.co/microsoft/phi-1_5)|1.4B|20.51|31.73|**42.48**|40.86|**71.74**|
 
 ## Demo
 
