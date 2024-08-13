@@ -1,16 +1,3 @@
----
-library_name: transformers
-license: mit
-base_model: microsoft/phi-1_5
-datasets:
-- teknium/OpenHermes-2.5
-- HuggingFaceH4/ultrafeedback_binarized
-- argilla/distilabel-intel-orca-dpo-pairs
-- jondurbin/py-dpo-v0.1
-- argilla/distilabel-math-preference-dpo
-pipeline_tag: text-generation
----
-
 # Phi-1.5
 The language model [phi-1.5](https://huggingface.co/microsoft/phi-1_5) is a Transformer with **1.3 billion** parameters. It was trained using the same data sources as [phi-1](https://huggingface.co/microsoft/phi-1), augmented with a new data source that consists of various NLP synthetic texts. When assessed against benchmarks testing common sense, language understanding, and logical reasoning, phi-1.5 demonstrates a nearly state-of-the-art performance among models with less than 10 billion parameters.
 
